@@ -1,0 +1,86 @@
+/* Reset some basic elements */
+body,
+h1,
+h2,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Centering the content in the viewport */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Changed to 'space-between' to correct spacing */
+    height: 100vh;
+    text-align: center;
+}
+
+/* Content styling */
+.content {
+    padding: 10vh 20px 0;
+    /* Provides padding at the top */
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background: #f0f0f0;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 600px) {
+    .content {
+        padding-top: 20px;
+        /* Smaller padding on mobile */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    a {
+        font-size: 0.9rem;
+    }
+}
