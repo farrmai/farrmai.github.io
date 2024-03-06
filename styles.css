@@ -21,15 +21,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Changed to 'space-between' to correct spacing */
     height: 100vh;
+    /* Full viewport height */
     text-align: center;
 }
 
 /* Content styling */
 .content {
-    padding: 10vh 20px 0;
-    /* Provides padding at the top */
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    /* Added bottom padding */
 }
 
 h1 {
@@ -66,13 +67,24 @@ footer {
 
 /* Responsive design for smaller screens */
 @media only screen and (max-width: 600px) {
+    .container {
+        height: auto;
+        /* Change to auto to prevent overflow */
+        min-height: 100vh;
+        /* Ensure it's at least the full height */
+    }
+
     .content {
         padding-top: 20px;
-        /* Smaller padding on mobile */
+        /* Reduced padding on mobile */
+        padding-bottom: 20px;
+        /* Ensure content does not overflow to footer */
     }
 
     h1 {
         font-size: 2.5rem;
+        margin-bottom: 2rem;
+        /* Adjusted for mobile */
     }
 
     h2 {
@@ -82,5 +94,9 @@ footer {
     p,
     a {
         font-size: 0.9rem;
+    }
+
+    footer {
+        /* If footer content is still pushed off screen, consider reducing padding or font size */
     }
 }
