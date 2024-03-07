@@ -65,38 +65,42 @@ footer {
     font-size: 0.8rem;
 }
 
+
+/* Centering the content in the viewport */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    /* Ensure the container fits the content */
+    min-height: 100vh;
+    /* Minimum height to fill the screen */
+    text-align: center;
+    border: 1px solid #ccc;
+    /* A light grey border */
+    margin: 0 10px;
+    /* Adds some space on the sides */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Adds subtle shadow for depth */
+}
+
+/* Content styling */
+.content {
+    padding: 16px;
+    /* Add padding all around the content */
+}
+
 /* Responsive design for smaller screens */
 @media only screen and (max-width: 600px) {
     .container {
-        height: auto;
-        /* Change to auto to prevent overflow */
-        min-height: 100vh;
-        /* Ensure it's at least the full height */
+        padding-bottom: 50px;
+        /* Add padding to lift the content above the browser's bottom bar */
     }
 
     .content {
-        padding-top: 20px;
-        /* Reduced padding on mobile */
-        padding-bottom: 20px;
-        /* Ensure content does not overflow to footer */
+        padding: 16px;
+        /* Sufficient padding to prevent text from touching the borders */
     }
 
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        /* Adjusted for mobile */
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p,
-    a {
-        font-size: 0.9rem;
-    }
-
-    footer {
-        /* If footer content is still pushed off screen, consider reducing padding or font size */
-    }
+    /* ... other styles ... */
 }
